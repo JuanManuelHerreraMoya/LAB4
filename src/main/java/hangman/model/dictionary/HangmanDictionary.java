@@ -8,6 +8,8 @@ package hangman.model.dictionary;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.inject.Inject;
+
 /**
  *
  * @author 2106913
@@ -16,7 +18,7 @@ public abstract class HangmanDictionary {
 
     private List<Character> characterSet;
     private List<String> availableWords;
-
+    @Inject
     public HangmanDictionary() {
         characterSet = createCharacterSet();
     }

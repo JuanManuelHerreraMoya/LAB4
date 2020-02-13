@@ -1,10 +1,17 @@
 package hangman.model;
+
+import com.google.inject.Inject;
+
 public class PowerBonusScore implements GameScore{
+	private int Score ;
+	@Inject
+	public PowerBonusScore() {
+		Score = 0 ;
+	}
 	
 	
 	@Override
 	public int calculateScore(int correcCount, int incorrectCount) {
-		int Score = 0 ;
 		if (incorrectCount >0) {
 			Score = Score - (8*incorrectCount);
 		}

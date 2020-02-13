@@ -7,12 +7,14 @@ package hangman.model.dictionary;
 
 import java.util.*;
 
+import com.google.inject.Inject;
+
 /**
  *
  * @author hcadavid Modified by fchaves
  */
 public class EnglishDictionaryDataSource extends HangmanDictionary {
-
+	 
     static private String words[] = {
         "PLAYER",
         "BALL",
@@ -20,7 +22,7 @@ public class EnglishDictionaryDataSource extends HangmanDictionary {
         "RAGE",
         "GAME"
     };
-
+    @Inject
     public EnglishDictionaryDataSource() {
         setAvalariableWords(Arrays.asList(words));
     }

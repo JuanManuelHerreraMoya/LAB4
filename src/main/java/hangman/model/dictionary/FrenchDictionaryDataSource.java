@@ -8,6 +8,8 @@ package hangman.model.dictionary;
 import java.util.Arrays;
 import java.util.List;
 
+import com.google.inject.Inject;
+
 /**
  *
  * @author 2106913
@@ -21,7 +23,7 @@ public class FrenchDictionaryDataSource extends HangmanDictionary {
         "TRÈS",
         "VOILÀ"
     };
-
+    @Inject
     public FrenchDictionaryDataSource() {
         setAvalariableWords(Arrays.asList(words));
     }

@@ -23,8 +23,9 @@ public class GameScoreTest {
 		valorMaximo = puntaje.calculateScore(5,0);
 		valorFrontera = puntaje.calculateScore(10,2);
 		Assert.assertEquals(0,valorMinimo);
-		Assert.assertEquals(90,valorFrontera);
 		Assert.assertEquals(50,valorMaximo);
+		Assert.assertEquals(140,valorFrontera);
+		
 	}
 	
 	@Test
@@ -32,8 +33,8 @@ public class GameScoreTest {
 		PowerBonusScore puntajePower = new PowerBonusScore();
 		int valorMinimo ,valorMaximo,valorFrontera,valorFronteraNegativa;
 		valorMinimo = puntajePower.calculateScore(0,5);
-		valorMaximo = puntajePower.calculateScore(3,0);
 		valorFrontera = puntajePower.calculateScore(2,5);
+		valorMaximo = puntajePower.calculateScore(3,0);
 		valorFronteraNegativa =  puntajePower.calculateScore(4,0);
 		Assert.assertEquals(0,valorMinimo);
 		Assert.assertEquals(0,valorFrontera);
@@ -44,13 +45,17 @@ public class GameScoreTest {
 	@Test
 	public void DeberiaDarBuenosResultadosConOriginalScore() {
 		 OriginalScore puntajeOriginal = new OriginalScore();
+		 
 		 int valorMinimo ,valorMaximo,valorFrontera;
-		 valorMinimo = puntajeOriginal.calculateScore(0,10);
 		 valorMaximo = puntajeOriginal.calculateScore(5,0);
-		 valorFrontera = puntajeOriginal.calculateScore(0,12);
-		 Assert.assertEquals(0,valorMinimo);
-		 Assert.assertEquals(0,valorFrontera);
+		 valorFrontera = puntajeOriginal.calculateScore(0,2);
+		 valorMinimo = puntajeOriginal.calculateScore(0,10);
+		 
 		 Assert.assertEquals(100,valorMaximo);
+		 Assert.assertEquals(80,valorFrontera);
+		 Assert.assertEquals(0,valorMinimo);
+		 
+		 
 	}
 
 	

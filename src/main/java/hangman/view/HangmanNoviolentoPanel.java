@@ -17,10 +17,12 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JPanel;
 
+import com.google.inject.Inject;
+
 public class HangmanNoviolentoPanel extends HangmanPanel {
 
     int incorrectCount;
-
+    @Inject
     public HangmanNoviolentoPanel() {
         incorrectCount = 0;
     }

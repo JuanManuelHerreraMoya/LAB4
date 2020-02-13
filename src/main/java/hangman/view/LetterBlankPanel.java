@@ -17,9 +17,11 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JPanel;
 
+import com.google.inject.Inject;
+
 public class LetterBlankPanel extends JPanel{
     private String letter;
-    
+    @Inject
     public LetterBlankPanel(){
         letter = "";
     }

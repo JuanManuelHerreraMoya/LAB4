@@ -5,12 +5,17 @@
  */
 package hangman.model;
 
+import com.google.inject.Inject;
+
 /**
  *
  * @author 2106913
  */
 public class French implements Language{
-
+	@Inject 
+	public French() {
+		
+	}
     @Override
     public String[] getFunctionControllerNames() {
         return new String[]{"Jouer","Score Èlevé","Crédits"};

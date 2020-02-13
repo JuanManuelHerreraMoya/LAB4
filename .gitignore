@@ -3,4 +3,8 @@ target
 /nbproject/
 .idea
 *.iml
-
+.classpath
+/target/
+/.settings/
+/bin/
+.project
